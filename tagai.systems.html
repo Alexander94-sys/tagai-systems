@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>ТагАй.Системы — Автоматизация бизнеса, создание приложений PWA и внедрение ИИ</title>
+    <meta name="description" content="IT-лаборатория полного цикла ТагАй.Системы. Проектирование прагматичных лайфстайл-экосистем, автоматизация процессов компании, создание мобильных приложений без сторов и интеграция нейросетей.">
+    <meta name="keywords" content="Создание приложений, Разработка приложения, Заказать разработка веб приложений, Автоматизация бизнеса, Автоматизация процессов, Внедрение искусственного интеллекта, Разработка интерфейсов, UX UI дизайн заказать, Управление вниманием пользователя">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&family=Unbounded:wght@400;700&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ТагАй.Системы",
+      "url": "https://tagaisystems.ru",
+      "logo": "https://tagaisystems.ru/logo.svg",
+      "description": "Продуктовая IT-лаборатория полного цикла. Симбиоз жесткого уральского прагматизма и гибких ИИ-технологий.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+7-909-002-97-55",
+          "contactType": "sales",
+          "areaServed": "RU",
+          "availableLanguage": "Russian"
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+7-996-189-91-89",
+          "contactType": "customer service",
+          "areaServed": "RU",
+          "availableLanguage": "Russian"
+        }
+      ],
+      "email": "AlexTagAItech@yandex.ru",
+      "foundingDate": "2026",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Екатеринбург",
+        "addressCountry": "RU"
+      }
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg-color: #0E1110;
+            --bg-card: #151A18;
+            --text-main: #CBD5E1;
+            --text-light: #F1F5F9;
+            --text-muted: #869694;
+            --malachite: #059669;
+            --malachite-glow: #10B981;
+            --copper: #D97706;
+            --brass: #F59E0B;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 80% 20%, rgba(217, 119, 6, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 10% 80%, rgba(5, 150, 105, 0.06) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(245, 158, 11, 0.03) 0%, transparent 60%);
+            background-attachment: fixed;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Unbounded', sans-serif;
+            font-weight: 700;
+            color: var(--text-light);
+        }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(30px); filter: blur(5px); } to { opacity: 1; transform: translateY(0); filter: blur(0); } }
+        @keyframes drawLine { from { width: 0; opacity: 0; } to { width: 100%; opacity: 1; } }
+        @keyframes travelSpark { 0% { left: 0%; opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { left: 100%; opacity: 0; } }
+        @keyframes floatBtn { 0%, 100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-6px) scale(1.03); } }
+        @keyframes pulseSpark { 0% { transform: scale(1); opacity: 0.6; } 50% { transform: scale(2); opacity: 0; } 100% { transform: scale(1); opacity: 0; } }
+        @keyframes fadeInModal { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+        @keyframes softPulse { 0% { box-shadow: 0 0 15px rgba(245, 158, 11, 0.3); } 50% { box-shadow: 0 0 30px rgba(245, 158, 11, 0.6), 0 0 45px rgba(245, 158, 11, 0.2); } 100% { box-shadow: 0 0 15px rgba(245, 158, 11, 0.3); } }
+        @keyframes gentleBounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; position: relative; z-index: 2; }
+        .section-title { font-size: clamp(1.8rem, 3vw, 2.8rem); margin-bottom: 3rem; text-align: center; letter-spacing: -0.02em; }
+
+        .brand-header { padding: 2rem 0; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(245, 158, 11, 0.1); }
+        .brand-logo { display: flex; align-items: center; gap: 0.5rem; }
+        .logo-svg { width: 4.2rem; height: auto; display: block; }
+        .brand-text { font-family: 'Unbounded', sans-serif; font-size: 1.3rem; font-weight: 700; color: var(--text-light); letter-spacing: -0.03em; white-space: nowrap; }
+        .brand-accent { color: var(--brass); }
+        .brand-desc { font-size: 0.85rem; color: var(--text-muted); max-width: 300px; text-align: right; line-height: 1.4; }
+
+        .hero-section { min-height: calc(100vh - 80px); display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; text-align: center; padding: 2rem 0 6rem 0; }
+        .badge { display: inline-flex; align-items: center; background: rgba(217, 119, 6, 0.08); border: 1px solid rgba(245, 158, 11, 0.2); padding: 0.6rem 1.4rem; border-radius: 4px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--brass); margin-bottom: 2.5rem; animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .hero-title { font-size: clamp(1.8rem, 4vw, 3.2rem); line-height: 1.15; margin-bottom: 1.5rem; letter-spacing: -0.03em; animation: fadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both; }
+        .scroll-slogan { font-size: clamp(1.1rem, 2.5vw, 1.6rem); color: var(--text-light); margin: 2.5rem auto; max-width: 900px; font-weight: 400; line-height: 1.5; opacity: 0.1; filter: blur(4px); transform: translateY(20px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .scroll-slogan.visible { opacity: 1; filter: blur(0); transform: translateY(0); }
+        .scroll-slogan span { color: var(--malachite-glow); font-weight: 600; }
+        .malachite-vein { height: 1px; background: linear-gradient(90deg, transparent, rgba(217, 119, 6, 0.3), var(--brass), rgba(5, 150, 105, 0.4), transparent); margin: 2rem auto; position: relative; max-width: 800px; width: 100%; animation: drawLine 1.2s ease-in-out 0.5s both; }
+        .malachite-vein::after { content: ''; position: absolute; top: -3px; width: 4px; height: 4px; background: #FFFFFF; border-radius: 50%; box-shadow: 0 0 10px #FFFFFF, 0 0 20px var(--brass); animation: travelSpark 3s linear infinite; }
+        .hero-description { font-size: clamp(1rem, 1.3vw, 1.15rem); line-height: 1.7; color: var(--text-muted); max-width: 850px; margin: 0 auto 4rem auto; animation: fadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both; }
+
+        .callback-trigger { position: fixed; bottom: 2rem; right: 2rem; z-index: 999; background: linear-gradient(135deg, var(--bg-card), #1F2723); border: 1px solid rgba(245, 158, 11, 0.3); padding: 1rem 1.8rem; border-radius: 50px; cursor: pointer; display: flex; align-items: center; gap: 0.8rem; text-decoration: none; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6); animation: floatBtn 4s ease-in-out infinite; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+        .callback-trigger:hover { border-color: var(--brass); box-shadow: 0 20px 40px rgba(245, 158, 11, 0.15); transform: scale(1.05); }
+        .callback-trigger .pulse-icon { width: 8px; height: 8px; background-color: var(--brass); border-radius: 50%; position: relative; }
+        .callback-trigger .pulse-icon::before { content: ''; position: absolute; width: 100%; height: 100%; background-color: var(--brass); border-radius: 50%; animation: pulseSpark 2s infinite; opacity: 0.6; left: 0; top: 0; }
+        .callback-trigger span { font-family: 'Unbounded', sans-serif; font-size: 0.75rem; font-weight: 700; color: var(--text-light); letter-spacing: 0.02em; }
+
+        .nav-container { position: fixed; right: 0; top: 50%; transform: translateY(-50%); z-index: 1000; display: flex; flex-direction: row-reverse; align-items: center; pointer-events: none; }
+        .nav-trigger { width: 160px; height: 270px; border-radius: 50%; background: rgba(21, 26, 24, 0.7); backdrop-filter: blur(14px); border: 1px solid rgba(245, 158, 11, 0.4); cursor: pointer; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); animation: softPulse 2.5s infinite; transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, animation 0.3s; pointer-events: all; display: flex; align-items: center; justify-content: flex-start; padding-left: 25px; position: relative; right: -80px; }
+        .nav-trigger.active { right: -20px; animation: none; box-shadow: 0 0 40px rgba(245, 158, 11, 0.5); }
+        .nav-trigger:hover { animation: none; border-color: var(--brass); box-shadow: 0 0 40px rgba(245, 158, 11, 0.5); }
+        .nav-trigger span { font-family: 'Unbounded', sans-serif; font-size: 0.8rem; font-weight: 700; color: var(--brass); text-transform: uppercase; letter-spacing: 0.1em; transform: rotate(-90deg); white-space: nowrap; }
+        .nav-menu { background: rgba(21, 26, 24, 0.8); backdrop-filter: blur(16px); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 12px; padding: 1.2rem 0; display: flex; flex-direction: column; gap: 0.6rem; min-width: 160px; transform: translateX(-100%); opacity: 0; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease; pointer-events: none; }
+        .nav-menu.open { transform: translateX(0); opacity: 1; pointer-events: all; }
+        .nav-link { background: none; border: none; color: var(--text-main); text-decoration: none; font-family: 'Unbounded', sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 0.6rem 1.2rem; border-radius: 4px; cursor: pointer; transition: all 0.3s ease; text-align: left; white-space: nowrap; }
+        .nav-link:hover { color: var(--brass); background: rgba(245, 158, 11, 0.05); }
+
+        .social-preview-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); backdrop-filter: blur(8px); z-index: 10001; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
+        .social-preview-overlay.active { opacity: 1; pointer-events: all; }
+        .social-preview-card { background: rgba(21, 26, 24, 0.9); backdrop-filter: blur(12px); border: 1px solid rgba(245, 158, 11, 0.4); border-radius: 8px; padding: 2.5rem; max-width: 450px; width: 90%; text-align: center; animation: fadeInModal 0.3s ease; }
+        .social-preview-card h3 { font-size: 1.3rem; margin-bottom: 1rem; color: var(--text-light); }
+        .social-preview-card p { font-size: 0.95rem; line-height: 1.6; color: var(--text-main); margin-bottom: 1.5rem; }
+        .social-preview-link { display: inline-block; font-family: 'Unbounded', sans-serif; font-size: 0.8rem; font-weight: 700; color: var(--brass); text-decoration: none; border: 1px solid var(--brass); padding: 0.7rem 1.8rem; border-radius: 4px; transition: all 0.3s ease; }
+        .social-preview-link:hover { background: var(--brass); color: var(--bg-color); }
+        .social-preview-close { margin-top: 1.5rem; background: none; border: none; color: var(--text-muted); cursor: pointer; font-size: 0.85rem; transition: color 0.3s; }
+        .social-preview-close:hover { color: var(--brass); }
+
+        #services { background: linear-gradient(to left, rgba(14,17,16,0) 0%, rgba(14,17,16,0.4) 30%, #0E1110 80%), url('services.webp') right center / cover no-repeat; }
+        #manifesto { background: linear-gradient(to left, rgba(14,17,16,0) 0%, rgba(14,17,16,0.4) 30%, #0E1110 80%), url('manifesto.webp') right center / cover no-repeat; }
+        #about { background: linear-gradient(to left, rgba(14,17,16,0) 0%, rgba(14,17,16,0.4) 30%, #0E1110 80%), url('about.webp') right center / cover no-repeat; }
+        #team { background: linear-gradient(to left, rgba(14,17,16,0) 0%, rgba(14,17,16,0.4) 30%, #0E1110 80%), url('team.webp') right center / cover no-repeat; }
+        #projects { background: linear-gradient(to left, rgba(14,17,16,0) 0%, rgba(14,17,16,0.4) 30%, #0E1110 80%), url('prototypes.webp') right center / cover no-repeat; }
+
+        .service-card, .team-card { background: rgba(21, 26, 24, 0.55); backdrop-filter: blur(12px); border: 1px solid rgba(245, 158, 11, 0.15); padding: 3rem 2.5rem; border-radius: 6px; position: relative; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+        .service-card:hover, .team-card:hover { background: rgba(21, 26, 24, 0.75); border-color: var(--brass); box-shadow: 0 20px 40px rgba(217, 119, 6, 0.15); transform: translateY(-5px); }
+        .service-card h3 { font-size: 1.15rem; line-height: 1.4; margin-bottom: 1.5rem; transition: color 0.3s ease; }
+        .service-card:hover h3 { color: var(--brass); }
+        .service-icon { width: 28px; height: 28px; margin-bottom: 1.5rem; color: var(--brass); }
+        .team-card h3 { font-size: 1.4rem; margin-bottom: 0.5rem; color: var(--text-light); }
+        .team-role { font-size: 0.9rem; color: var(--brass); margin-bottom: 1.2rem; font-weight: 600; letter-spacing: 0.02em; }
+        .team-desc { font-size: 0.95rem; line-height: 1.6; color: #F1F5F9; text-shadow: 0 1px 4px rgba(0,0,0,0.6); margin-bottom: 2rem; }
+        .team-contacts { display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem; color: var(--text-muted); }
+        .team-contacts a { color: var(--text-muted); text-decoration: none; transition: color 0.3s; }
+        .team-contacts a:hover { color: var(--brass); }
+        .team-emoji { display: inline-block; width: 2.4rem; height: 2.4rem; margin-right: 0.4rem; vertical-align: middle; animation: gentleBounce 2s infinite ease-in-out; }
+        .team-emoji svg { width: 100%; height: 100%; }
+        .service-card p, .about-text, .manifesto-text { color: #F1F5F9; text-shadow: 0 1px 4px rgba(0,0,0,0.6); font-size: inherit; line-height: inherit; }
+        .services-section { padding: 8rem 0; position: relative; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; }
+        .manifesto-section { padding: 8rem 0; position: relative; }
+        .manifesto-content { max-width: 900px; margin: 0 auto; text-align: center; }
+        .about-section { padding: 8rem 0; position: relative; }
+        .about-content { max-width: 900px; margin: 0 auto; text-align: center; }
+        .team-section { padding: 8rem 0; position: relative; }
+        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; }
+        .projects-section { padding: 8rem 0 4rem; position: relative; }
+        .project-status { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--brass); margin-bottom: 0.5rem; }
+        .card-dot { width: 4px; height: 4px; background-color: var(--brass); border-radius: 50%; margin-bottom: 1.5rem; box-shadow: 0 0 10px var(--brass); }
+
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); backdrop-filter: blur(8px); z-index: 10000; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
+        .modal-overlay.active { opacity: 1; pointer-events: all; }
+        .modal-content { background: rgba(21, 26, 24, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(245, 158, 11, 0.4); border-radius: 6px; padding: 3rem 2.5rem; max-width: 500px; width: 90%; position: relative; animation: fadeInModal 0.3s ease; }
+        .modal-content h2 { text-align: center; margin-bottom: 1rem; color: var(--text-light); }
+        .modal-content p { text-align: center; color: var(--text-muted); margin-bottom: 2rem; font-size: 1rem; line-height: 1.5; }
+        .modal-close { position: absolute; top: 1rem; right: 1.5rem; background: none; border: none; color: var(--text-muted); font-size: 1.5rem; cursor: pointer; transition: color 0.3s; }
+        .modal-close:hover { color: var(--brass); }
+        .form-group { margin-bottom: 1.8rem; }
+        .form-input { width: 100%; background-color: rgba(14, 17, 16, 0.7); border: 1px solid rgba(245, 158, 11, 0.2); padding: 1.2rem; border-radius: 4px; color: var(--text-light); font-family: 'Space Grotesk', sans-serif; font-size: 1rem; transition: all 0.3s ease; }
+        .form-input:focus { outline: none; border-color: var(--brass); box-shadow: 0 0 15px rgba(245, 158, 11, 0.15); }
+        textarea.form-input { resize: vertical; min-height: 100px; }
+        .submit-btn { width: 100%; font-family: 'Unbounded', sans-serif; font-size: 0.9rem; font-weight: 700; color: var(--bg-color); background: linear-gradient(135deg, var(--brass), var(--copper)); border: none; padding: 1.3rem; border-radius: 4px; cursor: pointer; transition: all 0.4s ease; margin-top: 1rem; box-shadow: 0 10px 25px rgba(217, 119, 6, 0.2); }
+        .submit-btn:hover { transform: translateY(-2px); box-shadow: 0 15px 30px rgba(217, 119, 6, 0.3); filter: brightness(1.1); }
+        .footer { margin-top: 4rem; border-top: 1px solid rgba(245, 158, 11, 0.1); padding-top: 2rem; text-align: center; }
+        .footer p { font-size: 0.85rem; color: var(--text-muted); }
+
+        @media (max-width: 768px) {
+            .hero-section { padding: 2rem 0; }
+            .services-section, .manifesto-section, .about-section, .team-section, .projects-section { padding: 4rem 0; }
+            .services-grid, .team-grid { grid-template-columns: 1fr; }
+            .brand-header { flex-direction: column; gap: 1rem; text-align: center; }
+            .brand-desc { text-align: center; }
+            .callback-trigger { bottom: 1rem; right: 1rem; padding: 0.8rem 1.4rem; }
+            .modal-content { padding: 2.5rem 1.5rem; }
+            .nav-trigger { width: 120px; height: 200px; right: -60px; padding-left: 18px; }
+            .nav-trigger.active { right: -15px; }
+            .nav-trigger span { font-size: 0.65rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+        <button class="nav-trigger" id="navTrigger">
+            <span>МЕНЮ</span>
+        </button>
+        <div class="nav-menu" id="navMenu">
+            <a href="#services" class="nav-link">Направления</a>
+            <a href="#about" class="nav-link">О нас</a>
+            <a href="#projects" class="nav-link">Проекты</a>
+            <a href="#" class="nav-link" id="socialLink">Мы в соцсетях</a>
+        </div>
+    </div>
+
+    <div class="social-preview-overlay" id="socialPreview">
+        <div class="social-preview-card">
+            <h3>📱 Люди, скрипты и ручной привод</h3>
+            <p>Наш канал — полигон двух деформаций. Я автоматизирую всё, что движется, с помощью ИИ и кода, а моя жена Ксюша строит системы и доказывает, что люди важнее роботов. Показываем, как вдвоем вывозить агентство на скриптах и ручном приводе.</p>
+            <a href="https://t.me/code_vs_empathy" target="_blank" class="social-preview-link">Перейти в канал</a>
+            <br>
+            <button class="social-preview-close" id="socialPreviewClose">Закрыть</button>
+        </div>
+    </div>
+
+    <div class="callback-trigger" id="callbackTrigger">
+        <div class="pulse-icon"></div>
+        <span>Заказать аудит</span>
+    </div>
+
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <h2>Начать проектирование</h2>
+            <p>Оставьте контакты. Мы разберем, как геймификация, PWA-технологии или ИИ-автоматизация поднимут ключевые метрики вашего бизнеса.</p>
+            <form id="auditForm" action="https://formspree.io/f/xpqeeowb" method="POST">
+                <div class="form-group">
+                    <input type="text" name="name" class="form-input" placeholder="Ваше имя" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="contact" class="form-input" placeholder="Телефон или Telegram" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" class="form-input" placeholder="Что вы хотите? Опишите задачу или запрос" rows="3"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Запустить аудит процессов</button>
+            </form>
+            <div id="formStatus" style="text-align:center; margin-top:1rem; color:var(--brass); display:none;">Отправляем...</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <header class="brand-header">
+            <div class="brand-logo">
+                <!-- Логотип: три кристалла, боковые наклонены, расстояние между ними -->
+                <svg class="logo-svg" viewBox="0 0 130 50" fill="none">
+                    <defs>
+                        <linearGradient id="brassGrad" x1="0" y1="0" x2="1" y2="1">
+                            <stop stop-color="#F59E0B"/>
+                            <stop offset="1" stop-color="#D97706"/>
+                        </linearGradient>
+                        <linearGradient id="darkGrad" x1="0" y1="0" x2="1" y2="1">
+                            <stop stop-color="#2A2A2A"/>
+                            <stop offset="1" stop-color="#0E1110"/>
+                        </linearGradient>
+                        <linearGradient id="malachiteGrad" x1="0" y1="0" x2="1" y2="1">
+                            <stop stop-color="#059669"/>
+                            <stop offset="1" stop-color="#10B981"/>
+                        </linearGradient>
+                        <g id="crystalShape">
+                            <polygon points="0,0 10,16 16,32 0,42 -16,32 -10,16" />
+                            <polygon points="0,0 -10,16 -6,22 0,18 6,22 10,16" />
+                        </g>
+                    </defs>
+                    <!-- Левый кристалл (наклонён влево) -->
+                    <g transform="translate(26,6) rotate(-10)">
+                        <use href="#crystalShape" fill="url(#darkGrad)" stroke="#059669" stroke-width="1.2" stroke-linejoin="round"/>
+                        <use href="#crystalShape" fill="url(#malachiteGrad)" opacity="0.35"/>
+                        <polygon points="0,0 10,16 4,10 -4,10" fill="#FFFFFF" opacity="0.12"/>
+                        <polygon points="-6,22 0,18 6,22" fill="#10B981" opacity="0.3"/>
+                    </g>
+                    <!-- Центральный кристалл (вертикально) -->
+                    <g transform="translate(65,6)">
+                        <use href="#crystalShape" fill="url(#brassGrad)" stroke="#D97706" stroke-width="1" stroke-linejoin="round"/>
+                        <polygon points="0,0 -10,16 -6,22 0,18 6,22 10,16" fill="#FFFFFF" opacity="0.3"/>
+                    </g>
+                    <!-- Правый кристалл (наклонён вправо) -->
+                    <g transform="translate(104,6) rotate(10)">
+                        <use href="#crystalShape" fill="url(#darkGrad)" stroke="#059669" stroke-width="1.2" stroke-linejoin="round"/>
+                        <use href="#crystalShape" fill="url(#malachiteGrad)" opacity="0.35"/>
+                        <polygon points="0,0 10,16 4,10 -4,10" fill="#FFFFFF" opacity="0.12"/>
+                        <polygon points="-6,22 0,18 6,22" fill="#10B981" opacity="0.3"/>
+                    </g>
+                </svg>
+                <span class="brand-text">ТагАй.<span class="brand-accent">Системы</span></span>
+            </div>
+            <div class="brand-desc">
+                Продуктовая IT-лаборатория полного цикла. Симбиоз жесткого уральского прагматизма и гибких ИИ-технологий.
+            </div>
+        </header>
+    </div>
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="badge">
+                <span>⚡️ Продуктовая IT-лаборатория полного цикла</span>
+            </div>
+            <h1 class="hero-title">
+                IT-лаборатория ТагАй.Системы: Автоматизация бизнеса,<br>создание приложений и быстрых микро-сервисов (PWA)
+            </h1>
+            <div id="target-slogan" class="scroll-slogan">
+                Технологии с <span>Уральским характером</span>: проектирование прагматичных лайфстайл-экосистем и быстрых цифровых продуктов с глубокой психологической геймификацией
+            </div>
+            <div class="malachite-vein"></div>
+            <p class="hero-description">
+                Мы объединяем жесткую инженерную архитектуру и внедрение искусственного интеллекта (ИИ) с экспертизой в области игротехники. Наша цель — убрать ментальный хаос, реализовать точечное управление вниманием пользователя и адаптировать сложную цифровую среду под реальные потребности человека.
+            </p>
+        </div>
+    </section>
+
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title">Направления разработки и интеграции</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                        <line x1="12" y1="18" x2="12.01" y2="18" />
+                        <path d="M8 6h8" />
+                    </svg>
+                    <h3>Создание мобильных приложений без сторов</h3>
+                    <p>Если вам необходимо срочно заказать разработка веб приложений нового поколения — наши технологии закроют эту боль. Мы реализуем проектирование быстрых микро-сервисов PWA со скоростью MVP за 4–7 дней. Полная независимость от санкций Google Play и App Store, бесшовный запуск в один клик и мгновенный доступ к аудитории.</p>
+                </div>
+                <div class="service-card">
+                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="3" />
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                    </svg>
+                    <h3>Автоматизация бизнес-процессов нейросетями</h3>
+                    <p>Профессиональная интеграция нейросетевых технологий в компанию для снижения операционных костов. Мы не просто внедряем сторонние API, а создаем кастомные ИИ-ассистенты и медиа-конвейеры под конкретную экономику компании. Настоящая ИИ-автоматизация под ключ, убирающая рутину из ручного привода.</p>
+                </div>
+                <div class="service-card">
+                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                        <circle cx="12" cy="12" r="3" />
+                    </svg>
+                    <h3>Разработка интерфейсов и UX UI дизайн заказать</h3>
+                    <p>Проектирование цифровых продуктов на стыке когнитивной психологии и дизайна. Мы настраиваем управление вниманием пользователя в интерфейсах, внедряя глубокие механики удержания. Психологическая геймификация ИТ-продуктов адаптирует сложные системы под реальное человеческое восприятие.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="manifesto" class="manifesto-section">
+        <div class="container">
+            <div class="manifesto-content">
+                <h2 class="section-title">Жесткая прагматика вместо красивых слайдов</h2>
+                <p class="manifesto-text">
+                    Для ТагАй.Системы комплексная автоматизация бизнеса — это не дань моде, а точный инженерный расчёт. Мы собираем ИТ-решения, которые обходятся недорого в поддержке, но выглядят премиально и работают без сбоев. <br><br>
+                    В этом и заключается наш <span class="highlight">уральский характер</span>: мы полностью исключаем ментальный хаос, жестко контролируем метрики и внедряем только те скрипты, которые приносят компании чистую прибыль.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">Инженерная честность как основа</h2>
+                <p class="about-text">
+                    Мы принципиально не продаем воздушные презентации. ТагАй.Системы — это сплав архитектуры баз данных и глубоких поведенческих наук. Любое создание приложений или автоматизация процессов у нас начинается с технологического аудита реальной воронки.
+                </p>
+                <p class="about-text">
+                    Наш бэкграунд сформирован на Урале — месте, где ценят реальную сборку, а не пустые обещания. Этот прагматизм зашит в наш код: интерфейсы удерживают фокус, базы выдерживают пиковые нагрузки, а алгоритмы заменяют десятки часов монотонного человеческого труда.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="team-section">
+        <div class="container">
+            <h2 class="section-title">Компания в лицах</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-emoji">
+                        <svg viewBox="0 0 48 48" fill="none">
+                            <path d="M24 8C18 8 14 12 14 18C14 22 16 26 20 28V32H28V28C32 26 34 22 34 18C34 12 30 8 24 8Z" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="18" cy="16" r="3" fill="#D97706" stroke="#F59E0B" stroke-width="1.5"/>
+                            <circle cx="30" cy="16" r="3" fill="#D97706" stroke="#F59E0B" stroke-width="1.5"/>
+                            <path d="M20 36H28V40H20V36Z" fill="#F59E0B" stroke="#D97706" stroke-width="1.5"/>
+                            <path d="M16 12L12 8" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M32 12L36 8" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="24" cy="24" r="2" fill="#F59E0B"/>
+                        </svg>
+                    </div>
+                    <h3>Андреев Александр</h3>
+                    <div class="team-role">Основатель, Технический директор</div>
+                    <p class="team-desc">Мозг компании. Отвечает за стек и архитектуру. Под его контролем разворачивается интеграция нейросетевых технологий в компанию и сложная ИИ-автоматизация под ключ. Связывает разрозненные сервисы в единый контур, переводя автоматизацию бизнес-процессов нейросетями из теории в осязаемый B2B-инструмент.</p>
+                    <div class="team-contacts">
+                        <a href="tel:+79090029755">+7 909 002-97-55</a>
+                        <a href="mailto:AlexTagAItech@yandex.ru">AlexTagAItech@yandex.ru</a>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-emoji">
+                        <svg viewBox="0 0 48 48" fill="none">
+                            <path d="M24 40C12 30 4 22 4 15C4 9 9 5 15 5C19 5 22 8 24 11C26 8 29 5 33 5C39 5 44 9 44 15C44 22 36 30 24 40Z" fill="#059669" stroke="#F59E0B" stroke-width="2" stroke-linejoin="round"/>
+                            <circle cx="18" cy="15" r="3" fill="#F59E0B" stroke="#D97706" stroke-width="1.5"/>
+                            <circle cx="30" cy="15" r="3" fill="#F59E0B" stroke="#D97706" stroke-width="1.5"/>
+                            <path d="M24 32L26 28L22 28L24 32Z" fill="#F59E0B"/>
+                        </svg>
+                    </div>
+                    <h3>Андреева Ксения</h3>
+                    <div class="team-role">Сооснователь, дипломированный бизнес-тренер, игропрактик, бизнес-консультант, методолог, архитектор бизнес-процессов</div>
+                    <p class="team-desc">Душа организации. Управляет продуктовой методологией. Её профиль — проектирование интерфейсов под клиповое мышление и комплексная психологическая геймификация ИТ-продуктов. Если вам нужно UX UI дизайн заказать не ради картинок, а ради удержания аудитории — она настраивает точечное управление вниманием пользователя в интерфейсах.</p>
+                    <div class="team-contacts">
+                        <a href="tel:+79961899189">+7 996 189-91-89</a>
+                        <a href="mailto:ksenia@k2hrevo.ru">ksenia@k2hrevo.ru</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title">Лаборатория прототипов</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="card-dot"></div>
+                    <h3>Кристаллическая аналитика</h3>
+                    <p>Платформа автоматизации отчётности с элементами предиктивной аналитики на основе ИИ. Помогает бизнесу видеть узкие места без погружения в Excel.</p>
+                </div>
+                <div class="service-card">
+                    <div class="card-dot"></div>
+                    <h3>Нейро-гейминг</h3>
+                    <p>Игровая PWA-экосистема для удержания пользователей в wellness-приложениях. Механики мотивации и кастомизации, встроенные в ДНК продукта.</p>
+                </div>
+                <div class="service-card">
+                    <div class="card-dot"></div>
+                    <h3>Малахитовый компас</h3>
+                    <p>Сервис интеллектуального трекинга задач для распределённых команд. Самонастраивающиеся алгоритмы приоритетов, заменяющие хаос ежедневных планёрок.</p>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <p>© 2026 ТагАй.Системы. Разработка интерфейсов, автоматизация процессов компании и интеграция нейросетей под ключ.</p>
+        </footer>
+    </section>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const slogan = document.getElementById('target-slogan');
+            if (window.scrollY > 40) {
+                slogan.classList.add('visible');
+            } else {
+                slogan.classList.remove('visible');
+            }
+        });
+
+        const trigger = document.getElementById('callbackTrigger');
+        const overlay = document.getElementById('modalOverlay');
+        const closeBtn = document.getElementById('modalClose');
+        const auditForm = document.getElementById('auditForm');
+        const formStatus = document.getElementById('formStatus');
+
+        trigger.addEventListener('click', () => overlay.classList.add('active'));
+        closeBtn.addEventListener('click', () => overlay.classList.remove('active'));
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) overlay.classList.remove('active');
+        });
+
+        auditForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            formStatus.style.display = 'block';
+            formStatus.textContent = 'Отправляем...';
+            const formData = new FormData(auditForm);
+            try {
+                const response = await fetch(auditForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (response.ok) {
+                    formStatus.textContent = 'Заявка отправлена! Скоро свяжемся.';
+                    auditForm.reset();
+                    setTimeout(() => {
+                        formStatus.style.display = 'none';
+                        overlay.classList.remove('active');
+                    }, 2000);
+                } else {
+                    throw new Error('Ошибка отправки');
+                }
+            } catch (error) {
+                formStatus.textContent = 'Ошибка! Попробуйте еще раз или свяжитесь напрямую.';
+            }
+        });
+
+        const navTrigger = document.getElementById('navTrigger');
+        const navMenu = document.getElementById('navMenu');
+
+        navTrigger.addEventListener('click', () => {
+            navTrigger.classList.toggle('active');
+            navMenu.classList.toggle('open');
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navTrigger.classList.remove('active');
+                navMenu.classList.remove('open');
+            });
+        });
+
+        const socialLink = document.getElementById('socialLink');
+        const socialPreview = document.getElementById('socialPreview');
+        const socialPreviewClose = document.getElementById('socialPreviewClose');
+
+        socialLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            socialPreview.classList.add('active');
+        });
+        socialPreviewClose.addEventListener('click', () => socialPreview.classList.remove('active'));
+        socialPreview.addEventListener('click', (e) => {
+            if (e.target === socialPreview) socialPreview.classList.remove('active');
+        });
+    </script>
+</body>
+</html>
