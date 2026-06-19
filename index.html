@@ -141,12 +141,11 @@
         #team { background: linear-gradient(to left, rgba(14,17,16,0) 0%, rgba(14,17,16,0.4) 30%, #0E1110 80%), url('team.webp') right center / cover no-repeat; }
         #projects { background: linear-gradient(to left, rgba(14,17,16,0) 0%, rgba(14,17,16,0.4) 30%, #0E1110 80%), url('prototypes.webp') right center / cover no-repeat; }
 
-        /* Уменьшенные отступы и шрифт для карточек услуг */
-        .service-card, .team-card { background: rgba(21, 26, 24, 0.55); backdrop-filter: blur(12px); border: 1px solid rgba(245, 158, 11, 0.15); padding: 2rem 1.8rem; border-radius: 6px; position: relative; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+        .service-card, .team-card { background: rgba(21, 26, 24, 0.55); backdrop-filter: blur(12px); border: 1px solid rgba(245, 158, 11, 0.15); padding: 1.8rem 1.5rem; border-radius: 6px; position: relative; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
         .service-card:hover, .team-card:hover { background: rgba(21, 26, 24, 0.75); border-color: var(--brass); box-shadow: 0 20px 40px rgba(217, 119, 6, 0.15); transform: translateY(-5px); }
-        .service-card h3 { font-size: 1rem; line-height: 1.3; margin-bottom: 1rem; transition: color 0.3s ease; }
+        .service-card h3 { font-size: 0.95rem; line-height: 1.3; margin-bottom: 0.8rem; transition: color 0.3s ease; }
         .service-card:hover h3 { color: var(--brass); }
-        .service-icon { width: 24px; height: 24px; margin-bottom: 1rem; color: var(--brass); }
+        .service-icon { width: 22px; height: 22px; margin-bottom: 0.8rem; color: var(--brass); }
         .team-card h3 { font-size: 1.4rem; margin-bottom: 0.5rem; color: var(--text-light); }
         .team-role { font-size: 0.9rem; color: var(--brass); margin-bottom: 1.2rem; font-weight: 600; letter-spacing: 0.02em; }
         .team-desc { font-size: 0.95rem; line-height: 1.6; color: #F1F5F9; text-shadow: 0 1px 4px rgba(0,0,0,0.6); margin-bottom: 2rem; }
@@ -155,10 +154,9 @@
         .team-contacts a:hover { color: var(--brass); }
         .team-emoji { display: inline-block; width: 2.4rem; height: 2.4rem; margin-right: 0.4rem; vertical-align: middle; animation: gentleBounce 2s infinite ease-in-out; }
         .team-emoji svg { width: 100%; height: 100%; }
-        .service-card p, .about-text, .manifesto-text { color: #F1F5F9; text-shadow: 0 1px 4px rgba(0,0,0,0.6); font-size: 0.85rem; line-height: inherit; }
+        .service-card p, .about-text, .manifesto-text { color: #F1F5F9; text-shadow: 0 1px 4px rgba(0,0,0,0.6); font-size: 0.8rem; line-height: inherit; }
         .services-section { padding: 8rem 0; position: relative; }
-        /* Четыре карточки в строку на десктопе */
-        .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.8rem; }
         .manifesto-section { padding: 8rem 0; position: relative; }
         .manifesto-content { max-width: 900px; margin: 0 auto; text-align: center; }
         .about-section { padding: 8rem 0; position: relative; }
@@ -185,7 +183,7 @@
         .footer { margin-top: 4rem; border-top: 1px solid rgba(245, 158, 11, 0.1); padding-top: 2rem; text-align: center; }
         .footer p { font-size: 0.85rem; color: var(--text-muted); }
 
-        @media (max-width: 1000px) {
+        @media (max-width: 900px) {
             .services-grid { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 600px) {
@@ -326,8 +324,8 @@
                         <line x1="12" y1="18" x2="12.01" y2="18" />
                         <path d="M8 6h8" />
                     </svg>
-                    <h3>Создание мобильных приложений без сторов</h3>
-                    <p>Проектирование ультра-легких PWA‑решений со скоростью MVP 4–7 дней. Бесшовный доступ в один клик, полная независимость от маркетов.</p>
+                    <h3>Мобильные приложения без сторов</h3>
+                    <p>Ультра-легкие PWA со скоростью MVP 4–7 дней. Бесшовный доступ, независимость от маркетов.</p>
                 </div>
                 <div class="service-card">
                     <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -335,7 +333,7 @@
                         <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
                     </svg>
                     <h3>Автоматизация бизнеса нейросетями</h3>
-                    <p>Кастомные ИИ-ассистенты и медиа-конвейеры под экономику компании. Снижаем рутину и операционные косты.</p>
+                    <p>Кастомные ИИ-ассистенты и медиа-конвейеры. Убираем рутину и снижаем издержки.</p>
                 </div>
                 <div class="service-card">
                     <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -343,7 +341,7 @@
                         <circle cx="12" cy="12" r="3" />
                     </svg>
                     <h3>UX/UI дизайн и геймификация</h3>
-                    <p>Интерфейсы на стыке психологии и дизайна. Удерживаем внимание пользователя, останавливаем выгорание.</p>
+                    <p>Интерфейсы на стыке психологии и дизайна. Удерживаем внимание, останавливаем выгорание.</p>
                 </div>
                 <div class="service-card">
                     <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -351,7 +349,24 @@
                         <path d="M8 21h8M12 17v4" />
                     </svg>
                     <h3>Создание сайтов под ключ</h3>
-                    <p>От лендингов до многофункциональных платформ по вашему ТЗ. Адаптивно, быстро, с продуманной архитектурой.</p>
+                    <p>От лендингов до платформ средней сложности по вашему ТЗ. Адаптивно, быстро, надёжно.</p>
+                </div>
+                <div class="service-card">
+                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <line x1="12" y1="8" x2="12" y2="12" />
+                        <line x1="12" y1="16" x2="12.01" y2="16" />
+                    </svg>
+                    <h3>Аудит и оптимизация ИТ-инфраструктуры</h3>
+                    <p>Выявим узкие места, настроим мониторинг и отказоустойчивость. Сократим простои.</p>
+                </div>
+                <div class="service-card">
+                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                    <h3>Техническая поддержка и сопровождение</h3>
+                    <p>Обслуживаем созданные решения, консультируем, развиваем функционал. Быстрая реакция.</p>
                 </div>
             </div>
         </div>
