@@ -249,7 +249,6 @@
     <div class="container">
         <header class="brand-header">
             <div class="brand-logo">
-                <!-- Логотип: три кристалла, боковые наклонены, расстояние между ними -->
                 <svg class="logo-svg" viewBox="0 0 130 50" fill="none">
                     <defs>
                         <linearGradient id="brassGrad" x1="0" y1="0" x2="1" y2="1">
@@ -269,19 +268,16 @@
                             <polygon points="0,0 -10,16 -6,22 0,18 6,22 10,16" />
                         </g>
                     </defs>
-                    <!-- Левый кристалл (наклонён влево) -->
                     <g transform="translate(26,6) rotate(-10)">
                         <use href="#crystalShape" fill="url(#darkGrad)" stroke="#059669" stroke-width="1.2" stroke-linejoin="round"/>
                         <use href="#crystalShape" fill="url(#malachiteGrad)" opacity="0.35"/>
                         <polygon points="0,0 10,16 4,10 -4,10" fill="#FFFFFF" opacity="0.12"/>
                         <polygon points="-6,22 0,18 6,22" fill="#10B981" opacity="0.3"/>
                     </g>
-                    <!-- Центральный кристалл (вертикально) -->
                     <g transform="translate(65,6)">
                         <use href="#crystalShape" fill="url(#brassGrad)" stroke="#D97706" stroke-width="1" stroke-linejoin="round"/>
                         <polygon points="0,0 -10,16 -6,22 0,18 6,22 10,16" fill="#FFFFFF" opacity="0.3"/>
                     </g>
-                    <!-- Правый кристалл (наклонён вправо) -->
                     <g transform="translate(104,6) rotate(10)">
                         <use href="#crystalShape" fill="url(#darkGrad)" stroke="#059669" stroke-width="1.2" stroke-linejoin="round"/>
                         <use href="#crystalShape" fill="url(#malachiteGrad)" opacity="0.35"/>
@@ -343,6 +339,15 @@
                     </svg>
                     <h3>Разработка интерфейсов и UX UI дизайн заказать</h3>
                     <p>Проектирование цифровых продуктов на стыке когнитивной психологии и дизайна. Мы настраиваем управление вниманием пользователя в интерфейсах, внедряя глубокие механики удержания. Психологическая геймификация ИТ-продуктов адаптирует сложные системы под реальное человеческое восприятие.</p>
+                </div>
+                <!-- Четвёртая карточка: создание сайтов -->
+                <div class="service-card">
+                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="3" width="20" height="14" rx="2" />
+                        <path d="M8 21h8M12 17v4" />
+                    </svg>
+                    <h3>Создание сайтов под ключ</h3>
+                    <p>Делаем сайты любой сложности: от продающих лендингов и одностраничных визиток до многофункциональных веб-платформ средней сложности. Разрабатываем строго по вашему ТЗ — с адаптивной вёрсткой, высокой скоростью загрузки и продуманной архитектурой. Вы получаете готовый продукт, который решает задачи бизнеса.</p>
                 </div>
             </div>
         </div>
@@ -521,5 +526,19 @@
             if (e.target === socialPreview) socialPreview.classList.remove('active');
         });
     </script>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109985130', 'ym');
+
+        ym(109985130, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/109985130" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>
