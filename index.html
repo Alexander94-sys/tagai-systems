@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>ТагАй.Системы — Автоматизация бизнеса, создание приложений PWA и внедрение ИИ</title>
-    <meta name="description" content="IT-лаборатория полного цикла ТагАй.Системы. Проектирование прагматичных лайфстайл-экосистем, автоматизация процессов компании, создание мобильных приложений без сторов и интеграция нейросетей.">
-    <meta name="keywords" content="Создание приложений, Разработка приложения, Заказать разработка веб приложений, Автоматизация бизнеса, Автоматизация процессов, Внедрение искусственного интеллекта, Разработка интерфейсов, UX UI дизайн заказать, Управление вниманием пользователя">
+    <title>ТагАй.Системы — Разработка приложений, PWA, самописные сайты, автоматизация бизнеса</title>
+    <meta name="description" content="IT‑лаборатория ТагАй.Системы. Разработка приложений под Android и PWA, создание самописных сайтов, автоматизация бизнеса и внедрение ИИ. Управление вниманием пользователя.">
+    <meta name="keywords" content="разработка приложений, PWA, Android, приложения для Android, бизнес‑приложения, автоматизация бизнеса, создание сайтов, самописные сайты, разработка сайтов, автоматизация процессов, внедрение ИИ, UX UI дизайн, управление вниманием">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -183,9 +183,7 @@
         .footer { margin-top: 4rem; border-top: 1px solid rgba(245, 158, 11, 0.1); padding-top: 2rem; text-align: center; }
         .footer p { font-size: 0.85rem; color: var(--text-muted); }
 
-        @media (max-width: 900px) {
-            .services-grid { grid-template-columns: repeat(2, 1fr); }
-        }
+        @media (max-width: 900px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 600px) {
             .hero-section { padding: 2rem 0; }
             .services-section, .manifesto-section, .about-section, .team-section, .projects-section { padding: 4rem 0; }
@@ -202,9 +200,7 @@
 </head>
 <body>
     <div class="nav-container">
-        <button class="nav-trigger" id="navTrigger">
-            <span>МЕНЮ</span>
-        </button>
+        <button class="nav-trigger" id="navTrigger"><span>МЕНЮ</span></button>
         <div class="nav-menu" id="navMenu">
             <a href="#services" class="nav-link">Направления</a>
             <a href="#about" class="nav-link">О нас</a>
@@ -217,15 +213,13 @@
         <div class="social-preview-card">
             <h3>📱 Люди, скрипты и ручной привод</h3>
             <p>Наш канал — полигон двух деформаций. Я автоматизирую всё, что движется, с помощью ИИ и кода, а моя жена Ксюша строит системы и доказывает, что люди важнее роботов. Показываем, как вдвоем вывозить агентство на скриптах и ручном приводе.</p>
-            <a href="https://t.me/code_vs_empathy" target="_blank" class="social-preview-link">Перейти в канал</a>
-            <br>
+            <a href="https://t.me/code_vs_empathy" target="_blank" class="social-preview-link">Перейти в канал</a><br>
             <button class="social-preview-close" id="socialPreviewClose">Закрыть</button>
         </div>
     </div>
 
     <div class="callback-trigger" id="callbackTrigger">
-        <div class="pulse-icon"></div>
-        <span>Заказать аудит</span>
+        <div class="pulse-icon"></div><span>Заказать аудит</span>
     </div>
 
     <div class="modal-overlay" id="modalOverlay">
@@ -234,15 +228,9 @@
             <h2>Начать проектирование</h2>
             <p>Оставьте контакты. Мы разберем, как геймификация, PWA-технологии или ИИ-автоматизация поднимут ключевые метрики вашего бизнеса.</p>
             <form id="auditForm" action="https://formspree.io/f/xpqeeowb" method="POST">
-                <div class="form-group">
-                    <input type="text" name="name" class="form-input" placeholder="Ваше имя" required>
-                </div>
-                <div class="form-group">
-                    <input type="text" name="contact" class="form-input" placeholder="Телефон или Telegram" required>
-                </div>
-                <div class="form-group">
-                    <textarea name="message" class="form-input" placeholder="Что вы хотите? Опишите задачу или запрос" rows="3"></textarea>
-                </div>
+                <div class="form-group"><input type="text" name="name" class="form-input" placeholder="Ваше имя" required></div>
+                <div class="form-group"><input type="text" name="contact" class="form-input" placeholder="Телефон или Telegram" required></div>
+                <div class="form-group"><textarea name="message" class="form-input" placeholder="Что вы хотите? Опишите задачу или запрос" rows="3"></textarea></div>
                 <button type="submit" class="submit-btn">Запустить аудит процессов</button>
             </form>
             <div id="formStatus" style="text-align:center; margin-top:1rem; color:var(--brass); display:none;">Отправляем...</div>
@@ -254,63 +242,31 @@
             <div class="brand-logo">
                 <svg class="logo-svg" viewBox="0 0 130 50" fill="none">
                     <defs>
-                        <linearGradient id="brassGrad" x1="0" y1="0" x2="1" y2="1">
-                            <stop stop-color="#F59E0B"/>
-                            <stop offset="1" stop-color="#D97706"/>
-                        </linearGradient>
-                        <linearGradient id="darkGrad" x1="0" y1="0" x2="1" y2="1">
-                            <stop stop-color="#2A2A2A"/>
-                            <stop offset="1" stop-color="#0E1110"/>
-                        </linearGradient>
-                        <linearGradient id="malachiteGrad" x1="0" y1="0" x2="1" y2="1">
-                            <stop stop-color="#059669"/>
-                            <stop offset="1" stop-color="#10B981"/>
-                        </linearGradient>
+                        <linearGradient id="brassGrad" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F59E0B"/><stop offset="1" stop-color="#D97706"/></linearGradient>
+                        <linearGradient id="darkGrad" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2A2A2A"/><stop offset="1" stop-color="#0E1110"/></linearGradient>
+                        <linearGradient id="malachiteGrad" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#059669"/><stop offset="1" stop-color="#10B981"/></linearGradient>
                         <g id="crystalShape">
                             <polygon points="0,0 10,16 16,32 0,42 -16,32 -10,16" />
                             <polygon points="0,0 -10,16 -6,22 0,18 6,22 10,16" />
                         </g>
                     </defs>
-                    <g transform="translate(26,6) rotate(-10)">
-                        <use href="#crystalShape" fill="url(#darkGrad)" stroke="#059669" stroke-width="1.2" stroke-linejoin="round"/>
-                        <use href="#crystalShape" fill="url(#malachiteGrad)" opacity="0.35"/>
-                        <polygon points="0,0 10,16 4,10 -4,10" fill="#FFFFFF" opacity="0.12"/>
-                        <polygon points="-6,22 0,18 6,22" fill="#10B981" opacity="0.3"/>
-                    </g>
-                    <g transform="translate(65,6)">
-                        <use href="#crystalShape" fill="url(#brassGrad)" stroke="#D97706" stroke-width="1" stroke-linejoin="round"/>
-                        <polygon points="0,0 -10,16 -6,22 0,18 6,22 10,16" fill="#FFFFFF" opacity="0.3"/>
-                    </g>
-                    <g transform="translate(104,6) rotate(10)">
-                        <use href="#crystalShape" fill="url(#darkGrad)" stroke="#059669" stroke-width="1.2" stroke-linejoin="round"/>
-                        <use href="#crystalShape" fill="url(#malachiteGrad)" opacity="0.35"/>
-                        <polygon points="0,0 10,16 4,10 -4,10" fill="#FFFFFF" opacity="0.12"/>
-                        <polygon points="-6,22 0,18 6,22" fill="#10B981" opacity="0.3"/>
-                    </g>
+                    <g transform="translate(26,6) rotate(-10)"><use href="#crystalShape" fill="url(#darkGrad)" stroke="#059669" stroke-width="1.2" stroke-linejoin="round"/><use href="#crystalShape" fill="url(#malachiteGrad)" opacity="0.35"/><polygon points="0,0 10,16 4,10 -4,10" fill="#FFFFFF" opacity="0.12"/><polygon points="-6,22 0,18 6,22" fill="#10B981" opacity="0.3"/></g>
+                    <g transform="translate(65,6)"><use href="#crystalShape" fill="url(#brassGrad)" stroke="#D97706" stroke-width="1" stroke-linejoin="round"/><polygon points="0,0 -10,16 -6,22 0,18 6,22 10,16" fill="#FFFFFF" opacity="0.3"/></g>
+                    <g transform="translate(104,6) rotate(10)"><use href="#crystalShape" fill="url(#darkGrad)" stroke="#059669" stroke-width="1.2" stroke-linejoin="round"/><use href="#crystalShape" fill="url(#malachiteGrad)" opacity="0.35"/><polygon points="0,0 10,16 4,10 -4,10" fill="#FFFFFF" opacity="0.12"/><polygon points="-6,22 0,18 6,22" fill="#10B981" opacity="0.3"/></g>
                 </svg>
                 <span class="brand-text">ТагАй.<span class="brand-accent">Системы</span></span>
             </div>
-            <div class="brand-desc">
-                Продуктовая IT-лаборатория полного цикла. Симбиоз жесткого уральского прагматизма и гибких ИИ-технологий.
-            </div>
+            <div class="brand-desc">Продуктовая IT-лаборатория полного цикла. Симбиоз жесткого уральского прагматизма и гибких ИИ-технологий.</div>
         </header>
     </div>
 
     <section class="hero-section">
         <div class="container">
-            <div class="badge">
-                <span>⚡️ Продуктовая IT-лаборатория полного цикла</span>
-            </div>
-            <h1 class="hero-title">
-                IT-лаборатория ТагАй.Системы: Автоматизация бизнеса,<br>создание приложений и быстрых микро-сервисов (PWA)
-            </h1>
-            <div id="target-slogan" class="scroll-slogan">
-                Технологии с <span>Уральским характером</span>: проектирование прагматичных лайфстайл-экосистем и быстрых цифровых продуктов с глубокой психологической геймификацией
-            </div>
+            <div class="badge"><span>⚡️ Продуктовая IT-лаборатория полного цикла</span></div>
+            <h1 class="hero-title">IT-лаборатория ТагАй.Системы: Автоматизация бизнеса,<br>создание приложений и быстрых микро-сервисов (PWA)</h1>
+            <div id="target-slogan" class="scroll-slogan">Технологии с <span>Уральским характером</span>: проектирование прагматичных лайфстайл-экосистем и быстрых цифровых продуктов с глубокой психологической геймификацией</div>
             <div class="malachite-vein"></div>
-            <p class="hero-description">
-                Мы объединяем жесткую инженерную архитектуру и внедрение искусственного интеллекта (ИИ) с экспертизой в области игротехники. Наша цель — убрать ментальный хаос, реализовать точечное управление вниманием пользователя и адаптировать сложную цифровую среду под реальные потребности человека.
-            </p>
+            <p class="hero-description">Мы объединяем жесткую инженерную архитектуру и внедрение искусственного интеллекта (ИИ) с экспертизой в области игротехники. Наша цель — убрать ментальный хаос, реализовать точечное управление вниманием пользователя и адаптировать сложную цифровую среду под реальные потребности человека.</p>
         </div>
     </section>
 
@@ -319,52 +275,32 @@
             <h2 class="section-title">Направления разработки и интеграции</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
-                        <line x1="12" y1="18" x2="12.01" y2="18" />
-                        <path d="M8 6h8" />
-                    </svg>
+                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/><path d="M8 6h8"/></svg>
                     <h3>Мобильные приложения без сторов</h3>
-                    <p>Ультра-легкие PWA со скоростью MVP 4–7 дней. Бесшовный доступ, независимость от маркетов.</p>
+                    <p>Ультра-легкие PWA со скоростью MVP 4–7 дней. Бесшовный доступ, независимость от маркетов. Работает как нативное приложение на Android и iOS.</p>
                 </div>
                 <div class="service-card">
-                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="3" />
-                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
-                    </svg>
+                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
                     <h3>Автоматизация бизнеса нейросетями</h3>
-                    <p>Кастомные ИИ-ассистенты и медиа-конвейеры. Убираем рутину и снижаем издержки.</p>
+                    <p>Кастомные ИИ-ассистенты и медиа-конвейеры для бизнес‑приложений. Убираем рутину и снижаем издержки.</p>
                 </div>
                 <div class="service-card">
-                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
-                        <circle cx="12" cy="12" r="3" />
-                    </svg>
+                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
                     <h3>UX/UI дизайн и геймификация</h3>
                     <p>Интерфейсы на стыке психологии и дизайна. Удерживаем внимание, останавливаем выгорание.</p>
                 </div>
                 <div class="service-card">
-                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="2" y="3" width="20" height="14" rx="2" />
-                        <path d="M8 21h8M12 17v4" />
-                    </svg>
+                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
                     <h3>Создание сайтов под ключ</h3>
-                    <p>От лендингов до платформ средней сложности по вашему ТЗ. Адаптивно, быстро, надёжно.</p>
+                    <p>От лендингов до самописных веб‑платформ по вашему ТЗ. Адаптивно, быстро, с продуманной архитектурой.</p>
                 </div>
                 <div class="service-card">
-                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10" />
-                        <line x1="12" y1="8" x2="12" y2="12" />
-                        <line x1="12" y1="16" x2="12.01" y2="16" />
-                    </svg>
+                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
                     <h3>Аудит и оптимизация процессов</h3>
                     <p>Найдём неэффективные процессы и точки потерь в бизнесе. Предложим конкретные решения для их автоматизации и ускорения.</p>
                 </div>
                 <div class="service-card">
-                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                        <polyline points="22,6 12,13 2,6" />
-                    </svg>
+                    <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                     <h3>Техническая поддержка и сопровождение</h3>
                     <p>Оперативно решаем технические проблемы, обновляем и развиваем ваши продукты. Вы занимаетесь бизнесом — мы обеспечиваем стабильность.</p>
                 </div>
@@ -388,12 +324,8 @@
         <div class="container">
             <div class="about-content">
                 <h2 class="section-title">Инженерная честность как основа</h2>
-                <p class="about-text">
-                    Мы принципиально не продаем воздушные презентации. ТагАй.Системы — это сплав архитектуры баз данных и глубоких поведенческих наук. Любое создание приложений или автоматизация процессов у нас начинается с технологического аудита реальной воронки.
-                </p>
-                <p class="about-text">
-                    Наш бэкграунд сформирован на Урале — месте, где ценят реальную сборку, а не пустые обещания. Этот прагматизм зашит в наш код: интерфейсы удерживают фокус, базы выдерживают пиковые нагрузки, а алгоритмы заменяют десятки часов монотонного человеческого труда.
-                </p>
+                <p class="about-text">Мы принципиально не продаем воздушные презентации. ТагАй.Системы — это сплав архитектуры баз данных и глубоких поведенческих наук. Любое создание приложений или автоматизация процессов у нас начинается с технологического аудита реальной воронки.</p>
+                <p class="about-text">Наш бэкграунд сформирован на Урале — месте, где ценят реальную сборку, а не пустые обещания. Этот прагматизм зашит в наш код: интерфейсы удерживают фокус, базы выдерживают пиковые нагрузки, а алгоритмы заменяют десятки часов монотонного человеческого труда.</p>
             </div>
         </div>
     </section>
@@ -403,41 +335,18 @@
             <h2 class="section-title">Компания в лицах</h2>
             <div class="team-grid">
                 <div class="team-card">
-                    <div class="team-emoji">
-                        <svg viewBox="0 0 48 48" fill="none">
-                            <path d="M24 8C18 8 14 12 14 18C14 22 16 26 20 28V32H28V28C32 26 34 22 34 18C34 12 30 8 24 8Z" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <circle cx="18" cy="16" r="3" fill="#D97706" stroke="#F59E0B" stroke-width="1.5"/>
-                            <circle cx="30" cy="16" r="3" fill="#D97706" stroke="#F59E0B" stroke-width="1.5"/>
-                            <path d="M20 36H28V40H20V36Z" fill="#F59E0B" stroke="#D97706" stroke-width="1.5"/>
-                            <path d="M16 12L12 8" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M32 12L36 8" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/>
-                            <circle cx="24" cy="24" r="2" fill="#F59E0B"/>
-                        </svg>
-                    </div>
+                    <div class="team-emoji"><svg viewBox="0 0 48 48" fill="none"><path d="M24 8C18 8 14 12 14 18C14 22 16 26 20 28V32H28V28C32 26 34 22 34 18C34 12 30 8 24 8Z" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="16" r="3" fill="#D97706" stroke="#F59E0B" stroke-width="1.5"/><circle cx="30" cy="16" r="3" fill="#D97706" stroke="#F59E0B" stroke-width="1.5"/><path d="M20 36H28V40H20V36Z" fill="#F59E0B" stroke="#D97706" stroke-width="1.5"/><path d="M16 12L12 8" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/><path d="M32 12L36 8" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="24" r="2" fill="#F59E0B"/></svg></div>
                     <h3>Андреев Александр</h3>
                     <div class="team-role">Основатель, Технический директор</div>
                     <p class="team-desc">Мозг компании. Отвечает за стек и архитектуру. Под его контролем разворачивается интеграция нейросетевых технологий в компанию и сложная ИИ-автоматизация под ключ. Связывает разрозненные сервисы в единый контур, переводя автоматизацию бизнес-процессов нейросетями из теории в осязаемый B2B-инструмент.</p>
-                    <div class="team-contacts">
-                        <a href="tel:+79090029755">+7 909 002-97-55</a>
-                        <a href="mailto:AlexTagAItech@yandex.ru">AlexTagAItech@yandex.ru</a>
-                    </div>
+                    <div class="team-contacts"><a href="tel:+79090029755">+7 909 002-97-55</a><a href="mailto:AlexTagAItech@yandex.ru">AlexTagAItech@yandex.ru</a></div>
                 </div>
                 <div class="team-card">
-                    <div class="team-emoji">
-                        <svg viewBox="0 0 48 48" fill="none">
-                            <path d="M24 40C12 30 4 22 4 15C4 9 9 5 15 5C19 5 22 8 24 11C26 8 29 5 33 5C39 5 44 9 44 15C44 22 36 30 24 40Z" fill="#059669" stroke="#F59E0B" stroke-width="2" stroke-linejoin="round"/>
-                            <circle cx="18" cy="15" r="3" fill="#F59E0B" stroke="#D97706" stroke-width="1.5"/>
-                            <circle cx="30" cy="15" r="3" fill="#F59E0B" stroke="#D97706" stroke-width="1.5"/>
-                            <path d="M24 32L26 28L22 28L24 32Z" fill="#F59E0B"/>
-                        </svg>
-                    </div>
+                    <div class="team-emoji"><svg viewBox="0 0 48 48" fill="none"><path d="M24 40C12 30 4 22 4 15C4 9 9 5 15 5C19 5 22 8 24 11C26 8 29 5 33 5C39 5 44 9 44 15C44 22 36 30 24 40Z" fill="#059669" stroke="#F59E0B" stroke-width="2" stroke-linejoin="round"/><circle cx="18" cy="15" r="3" fill="#F59E0B" stroke="#D97706" stroke-width="1.5"/><circle cx="30" cy="15" r="3" fill="#F59E0B" stroke="#D97706" stroke-width="1.5"/><path d="M24 32L26 28L22 28L24 32Z" fill="#F59E0B"/></svg></div>
                     <h3>Андреева Ксения</h3>
                     <div class="team-role">Сооснователь, дипломированный бизнес-тренер, игропрактик, бизнес-консультант, методолог, архитектор бизнес-процессов</div>
                     <p class="team-desc">Душа организации. Управляет продуктовой методологией. Её профиль — проектирование интерфейсов под клиповое мышление и комплексная психологическая геймификация ИТ-продуктов. Если вам нужно UX UI дизайн заказать не ради картинок, а ради удержания аудитории — она настраивает точечное управление вниманием пользователя в интерфейсах.</p>
-                    <div class="team-contacts">
-                        <a href="tel:+79961899189">+7 996 189-91-89</a>
-                        <a href="mailto:ksenia@k2hrevo.ru">ksenia@k2hrevo.ru</a>
-                    </div>
+                    <div class="team-contacts"><a href="tel:+79961899189">+7 996 189-91-89</a><a href="mailto:ksenia@k2hrevo.ru">ksenia@k2hrevo.ru</a></div>
                 </div>
             </div>
         </div>
@@ -447,36 +356,18 @@
         <div class="container">
             <h2 class="section-title">Лаборатория прототипов</h2>
             <div class="services-grid">
-                <div class="service-card">
-                    <div class="card-dot"></div>
-                    <h3>Кристаллическая аналитика</h3>
-                    <p>Платформа автоматизации отчётности с элементами предиктивной аналитики на основе ИИ. Помогает бизнесу видеть узкие места без погружения в Excel.</p>
-                </div>
-                <div class="service-card">
-                    <div class="card-dot"></div>
-                    <h3>Нейро-гейминг</h3>
-                    <p>Игровая PWA-экосистема для удержания пользователей в wellness-приложениях. Механики мотивации и кастомизации, встроенные в ДНК продукта.</p>
-                </div>
-                <div class="service-card">
-                    <div class="card-dot"></div>
-                    <h3>Малахитовый компас</h3>
-                    <p>Сервис интеллектуального трекинга задач для распределённых команд. Самонастраивающиеся алгоритмы приоритетов, заменяющие хаос ежедневных планёрок.</p>
-                </div>
+                <div class="service-card"><div class="card-dot"></div><h3>Кристаллическая аналитика</h3><p>Платформа автоматизации отчётности с элементами предиктивной аналитики на основе ИИ. Помогает бизнесу видеть узкие места без погружения в Excel.</p></div>
+                <div class="service-card"><div class="card-dot"></div><h3>Нейро-гейминг</h3><p>Игровая PWA-экосистема для удержания пользователей в wellness-приложениях. Механики мотивации и кастомизации, встроенные в ДНК продукта.</p></div>
+                <div class="service-card"><div class="card-dot"></div><h3>Малахитовый компас</h3><p>Сервис интеллектуального трекинга задач для распределённых команд. Самонастраивающиеся алгоритмы приоритетов, заменяющие хаос ежедневных планёрок.</p></div>
             </div>
         </div>
-        <footer class="footer">
-            <p>© 2026 ТагАй.Системы. Разработка интерфейсов, автоматизация процессов компании и интеграция нейросетей под ключ.</p>
-        </footer>
+        <footer class="footer"><p>© 2026 ТагАй.Системы. Разработка интерфейсов, автоматизация процессов компании и интеграция нейросетей под ключ.</p></footer>
     </section>
 
     <script>
         window.addEventListener('scroll', function() {
             const slogan = document.getElementById('target-slogan');
-            if (window.scrollY > 40) {
-                slogan.classList.add('visible');
-            } else {
-                slogan.classList.remove('visible');
-            }
+            if (window.scrollY > 40) slogan.classList.add('visible'); else slogan.classList.remove('visible');
         });
 
         const trigger = document.getElementById('callbackTrigger');
@@ -487,9 +378,7 @@
 
         trigger.addEventListener('click', () => overlay.classList.add('active'));
         closeBtn.addEventListener('click', () => overlay.classList.remove('active'));
-        overlay.addEventListener('click', (e) => {
-            if (e.target === overlay) overlay.classList.remove('active');
-        });
+        overlay.addEventListener('click', (e) => { if (e.target === overlay) overlay.classList.remove('active'); });
 
         auditForm.addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -497,64 +386,30 @@
             formStatus.textContent = 'Отправляем...';
             const formData = new FormData(auditForm);
             try {
-                const response = await fetch(auditForm.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: { 'Accept': 'application/json' }
-                });
+                const response = await fetch(auditForm.action, { method: 'POST', body: formData, headers: { 'Accept': 'application/json' } });
                 if (response.ok) {
                     formStatus.textContent = 'Заявка отправлена! Скоро свяжемся.';
                     auditForm.reset();
-                    setTimeout(() => {
-                        formStatus.style.display = 'none';
-                        overlay.classList.remove('active');
-                    }, 2000);
-                } else {
-                    throw new Error('Ошибка отправки');
-                }
-            } catch (error) {
-                formStatus.textContent = 'Ошибка! Попробуйте еще раз или свяжитесь напрямую.';
-            }
+                    setTimeout(() => { formStatus.style.display = 'none'; overlay.classList.remove('active'); }, 2000);
+                } else throw new Error('Ошибка отправки');
+            } catch (error) { formStatus.textContent = 'Ошибка! Попробуйте еще раз или свяжитесь напрямую.'; }
         });
 
         const navTrigger = document.getElementById('navTrigger');
         const navMenu = document.getElementById('navMenu');
-
-        navTrigger.addEventListener('click', () => {
-            navTrigger.classList.toggle('active');
-            navMenu.classList.toggle('open');
-        });
-
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                navTrigger.classList.remove('active');
-                navMenu.classList.remove('open');
-            });
-        });
+        navTrigger.addEventListener('click', () => { navTrigger.classList.toggle('active'); navMenu.classList.toggle('open'); });
+        document.querySelectorAll('.nav-link').forEach(link => link.addEventListener('click', () => { navTrigger.classList.remove('active'); navMenu.classList.remove('open'); }));
 
         const socialLink = document.getElementById('socialLink');
         const socialPreview = document.getElementById('socialPreview');
         const socialPreviewClose = document.getElementById('socialPreviewClose');
-
-        socialLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            socialPreview.classList.add('active');
-        });
+        socialLink.addEventListener('click', (e) => { e.preventDefault(); socialPreview.classList.add('active'); });
         socialPreviewClose.addEventListener('click', () => socialPreview.classList.remove('active'));
-        socialPreview.addEventListener('click', (e) => {
-            if (e.target === socialPreview) socialPreview.classList.remove('active');
-        });
+        socialPreview.addEventListener('click', (e) => { if (e.target === socialPreview) socialPreview.classList.remove('active'); });
     </script>
-
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
-        (function(m,e,t,r,i,k,a){
-            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-            m[i].l=1*new Date();
-            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109985130', 'ym');
-
+        (function(m,e,t,r,i,k,a){ m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date(); for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }} k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a) })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109985130', 'ym');
         ym(109985130, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/109985130" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
